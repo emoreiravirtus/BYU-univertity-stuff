@@ -60,3 +60,10 @@ chr () {
 br () {
     git branch
 }
+
+# Solves the following problem
+# fatal: The upstream branch of your current branch does not match
+# the name of your current branch.
+psor () {
+    git push origin HEAD
+}
