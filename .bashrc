@@ -55,3 +55,8 @@ rmbr () {
 chr () {
     git cherry -v "$1"
 }
+
+# Shows all branches appended to your current branch.
+br () {
+    git branch
+}
