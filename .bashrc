@@ -67,3 +67,17 @@ br () {
 psor () {
     git push origin HEAD
 }
+
+criarbranchsconfig() {
+
+    torres=("corp/corp" "pf/pfl2" "pj/pjl2")
+
+    esteiras=("tu" "ti" "th" "pr")
+
+    for esteira in ${!esteiras[@]}; do
+        for torre in ${!torres[@]}; do
+            nomeDaBranch="release/ocp/${torres[$torre]}/${esteiras[$esteira]}" 
+            git checkout -b "$nomeDaBranch" && git push --set-upstream origin "$nomeDaBranch"
+        done
+    done
+}
